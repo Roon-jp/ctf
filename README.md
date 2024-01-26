@@ -1,5 +1,7 @@
 # ctf
-
+```
+ctf stash ayaya
+```
 # To look for
 
 ```
@@ -72,19 +74,33 @@ maybe have sql injection?.
 
 ```
 man <cmd> (manual for help/reference)
+
 nmap: nmap -sC -sV -oN nmap/initial xxx.xxx.xxx.xxx
 netdiscover
-tshark: tshark -r <filename.pcapng> -T fields -e usb.capdata > flag
-ssh: ssh <user>@<destination-ip>
-gobuster (gobuster -w /opt/DirBuster-0.12/directory-list-2.3-medium.txt -u http://xxx.xxx.xxx.xxx/) (replace ip with destination.)
-searchsploit	
-hydra (bruteforce password) : hydra -l <user> -P /opt/rockyou.txt ssh://xxx.xxx.xxx.xxx (rockyou.txt may be other dict idk.)
-enum4linux (enumeration for log(?)) : /opt/enum41inux/enum41inux.pl -a xxx.xxx.xxx.xxx | tee enum4linux.log (tee is for output to a file.)
-linpeas: scp /opt/linPEAS/linpeas.sh <user>@<destination-address>:/dev/shm
-johntheripper: 	/opt/JohnTheRipper/run/ssh2john.py <file> > forjohn.txt(whatever)
-				/opt/JohnTheRipper/run/john forjohn.txt 
-				/opt/JohnTheRipper/run/john forjohn.txt --wordlist=/opt/rockyou.txt
 
+tshark:
+tshark -r <filename.pcapng> -T fields -e usb.capdata > flag
+
+ssh: 
+ssh <user>@<destination-ip>
+
+gobuster (gobuster -w /opt/DirBuster-0.12/directory-list-2.3-medium.txt -u http://xxx.xxx.xxx.xxx/) (replace ip with destination.)
+
+searchsploit	
+
+hydra (bruteforce password) : 
+hydra -l <user> -P /opt/rockyou.txt ssh://xxx.xxx.xxx.xxx (rockyou.txt may be other dict idk.)
+
+enum4linux (enumeration for log(?)) : 
+/opt/enum41inux/enum41inux.pl -a xxx.xxx.xxx.xxx | tee enum4linux.log (tee is for output to a file.)
+
+linpeas: 
+scp /opt/linPEAS/linpeas.sh <user>@<destination-address>:/dev/shm
+
+johntheripper: 	
+/opt/JohnTheRipper/run/ssh2john.py <file> > forjohn.txt(whatever)
+/opt/JohnTheRipper/run/john forjohn.txt 
+/opt/JohnTheRipper/run/john forjohn.txt --wordlist=/opt/rockyou.txt
 
 netdiscover -i eth0 -r xxx.xxx.xxx.xxx/xx (network address)
 nmap -T4 -n -Pn xxx.xxx.xxx.xxx (address to check)
